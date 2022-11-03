@@ -16,6 +16,7 @@ describe('HeroesComponent', () => {
         // Initialize the mock object with the name of the methods of the service we will need
         mockHeroService = jasmine.createSpyObj(['getHeroes', 'addHero', 'deleteHero']);
 
+        // Angular is not playing part in this test, since we are initializing the component. And thus the ngOnInit() lifecycle method is not called
         component = new HeroesComponent(mockHeroService);
     });
 
