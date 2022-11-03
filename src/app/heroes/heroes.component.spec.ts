@@ -19,6 +19,7 @@ describe('HeroesComponent', () => {
         component = new HeroesComponent(mockHeroService);
     });
 
+    // This is a state based test, checking the state of the component has changed (the length of the array)
     describe('delete', () => {
         it('should remove the indicated hero from the heroes list', () => {
             mockHeroService.deleteHero.and.returnValue(of(true)); // Tell Jasmine (using 'and' plus 'return Value') to return an simple observable (with 'of') for method deleteHero; otherwise the test fails since the delete() returns an observable
