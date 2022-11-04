@@ -23,6 +23,7 @@ describe('HeroComponent (shallow tests)', () => {
         fixture.componentInstance.hero = { id: 1, name: 'SuperDude', strength: 3 };
         // this test fails, because the string it's empaty because Angular has not implement the bindings, {{her.name}} among others
         // need to change detection to execute to implement those bindings a set values
+        fixture.detectChanges();
         
         expect(fixture.nativeElement.querySelector('a').textContent).toContain('SuperDude');
     });
