@@ -25,6 +25,7 @@ describe('HeroComponent (shallow tests)', () => {
         // need to change detection to execute to implement those bindings a set values
         fixture.detectChanges();
         
+        // nativeElement exposes a DOM object, a regular browser DOM API 
         expect(fixture.nativeElement.querySelector('a').textContent).toContain('SuperDude');
     });
 });
