@@ -1,3 +1,4 @@
+import { NO_ERRORS_SCHEMA } from "@angular/core";
 import { ComponentFixture, TestBed } from "@angular/core/testing";
 import { HeroComponent } from "./hero.component";
 
@@ -6,7 +7,8 @@ describe('HeroComponent (shallow tests)', () => {
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            declarations: [HeroComponent]
+            declarations: [HeroComponent],
+            schemas: [NO_ERRORS_SCHEMA] // Says to Angular not to try to validate the schema/template using
         });
         fixture = TestBed.createComponent(HeroComponent);
     });
