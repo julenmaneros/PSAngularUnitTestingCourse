@@ -15,7 +15,7 @@ describe('HeroComponent (shallow tests)', () => {
 
     it('should have the correct hero', () => {
         fixture.componentInstance.hero = { id: 1, name: 'SuperDude', strength: 3 };
-        fixture.detectChanges();
+        // fixture.detectChanges(); Not really needed, just to illustrate console errors and NO_ERROR_SCHEMA
         expect(fixture.componentInstance.hero.name).toEqual('SuperDude');
     });
 });
