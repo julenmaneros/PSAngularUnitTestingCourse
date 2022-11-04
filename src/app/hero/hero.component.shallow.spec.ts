@@ -18,4 +18,12 @@ describe('HeroComponent (shallow tests)', () => {
         // fixture.detectChanges(); Not really needed, just to illustrate console errors and NO_ERROR_SCHEMA
         expect(fixture.componentInstance.hero.name).toEqual('SuperDude');
     });
+
+    it('should render the hero name in an anchor tag', () => {
+        fixture.componentInstance.hero = { id: 1, name: 'SuperDude', strength: 3 };
+        // this test fails, because the string it's empaty because Angular has not implement the bindings, {{her.name}} among others
+        // need to change detection to execute to implement those bindings a set values
+        
+        expect(fixture.nativeElement.querySelector('a').textContent).toContain('SuperDude');
+    });
 });
